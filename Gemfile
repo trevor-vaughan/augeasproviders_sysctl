@@ -33,4 +33,3 @@ group :development do
   gem 'beaker-rspec', :require => false
   gem 'vagrant-wrapper', :require => false
   gem 'simp-rake-helpers',       :require => false
-end
