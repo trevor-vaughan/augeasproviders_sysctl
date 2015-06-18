@@ -59,7 +59,7 @@ Puppet::Type.type(:sysctl).provide(:augeas, :parent => Puppet::Type.type(:augeas
     end
   end
 
-  def create 
+  def create
     # the value to pass to augeas can come either from the 'value' or the
     # 'val' type parameter.
     value = resource[:value] || resource[:val]
