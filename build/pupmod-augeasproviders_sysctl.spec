@@ -2,7 +2,7 @@
 
 Summary: Sysctl Augeas-based providers for Puppet
 Name: pupmod-augeasproviders_sysctl
-Version: 2.0.1
+Version: 2.1.0
 Release: 0
 License: Apache License, 2.0
 Group: Applications/System
@@ -11,10 +11,9 @@ Source: %{name}-%{version}-%{release}.tar.gz
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Buildarch: noarch
 Requires: pupmod-augeasproviders_core >= 2.0.1
-Requires: simp-bootstrap >= 4.2.0
 Requires: puppet
 
-Prefix: /etc/puppet/environments/simp/modules
+Prefix: %{_sysconfdir}/puppet/environments/simp/modules
 
 %description
 This module provides type/provider for sysctl using the Augeas configuration API library.
@@ -50,5 +49,8 @@ mkdir -p %{buildroot}/%{prefix}/%{mod_name}
 # Post uninstall stuff
 
 %changelog
+* Thu mar 10 2016 Trevor Vaughan <tvaughan@onyxpoint.com> - 2.1.0-0
+- Updated to the latest version which adds the :silent option.
+
 * Wed Feb 18 2015 Trevor Vaughan <tvaughan@onyxpoint.com> - 2.0.1-0
 - First release of %{mod_name} from Team Hercules
